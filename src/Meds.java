@@ -1,108 +1,114 @@
 import java.io.Serializable;
 import java.time.LocalDate;
 
-// Jag skapade denna som huvud Meds class ifall jag skall addera mer än bara Pills som skall kunna ärva från den
+//
 public class Meds implements Serializable {
 
-    protected String preparat;
-    protected int antalKvar;
-    protected int uttagKvar;
-    protected int antalPerUttag;
-    protected int konsPerDag;
-    protected int evExtraPerDag;
+    protected String name;
+    protected int remaining;
+    protected int bundles;
+    protected int amountInBundle;
+    protected int perDay;
+    protected int extra;
     protected LocalDate lastDate;
 
     public Meds() {
 
     }
 
-    public Meds(String preparat, int antalKvar, int uttagKvar, int antalPerUttag, int konsPerDag, int evExtraPerDag, LocalDate date) {
-        this.preparat = preparat;
-        this.antalKvar = antalKvar;
-        this.uttagKvar = uttagKvar;
-        this.antalPerUttag = antalPerUttag;
-        this.konsPerDag = konsPerDag;
-        this.evExtraPerDag = evExtraPerDag;
+    public Meds(String name, int remaining, int bundles, int amountInBundle, int perDay, int extra, LocalDate date) {
+        this.name = name;
+        this.remaining = remaining;
+        this.bundles = bundles;
+        this.amountInBundle = amountInBundle;
+        this.perDay = perDay;
+        this.extra = extra;
         this.lastDate = date;
     }
 
-
-
     public void consume(int days) {
-        int antalConsumed = days * konsPerDag;
-        antalKvar = antalKvar - antalConsumed;
+        int consumed = days * perDay;
+        remaining = remaining - consumed;
 //        // Behöver en variabel för antal dagar kvar men skall den hanteras här?
 //        int dagarKvar = ((uttagKvar*antalPerUttag)+antalKvar)/konsPerDag;
     }
 
-    public String getPreparat() {
-        return preparat;
+    public String getName() {
+
+        return name;
     }
 
-    public void setPreparat(String preparat) {
-        this.preparat = preparat;
+    public void setName(String name) {
+
+        this.name = name;
     }
 
-    public int getAntalKvar() {
-        return antalKvar;
+    public int getRemaining() {
+
+        return remaining;
     }
 
-    public void setAntalKvar(int antalKvar) {
-        this.antalKvar = antalKvar;
+    public void setRemaining(int remaining) {
+
+        this.remaining = remaining;
     }
 
-    public int getUttagKvar() {
-        return uttagKvar;
+    public int getBundles() {
+
+        return bundles;
     }
 
-    public void setUttagKvar(int uttagKvar) {
-        this.uttagKvar = uttagKvar;
+    public void setBundles(int bundles) {
+
+        this.bundles = bundles;
     }
 
-    public int getAntalPerUttag() {
-        return antalPerUttag;
+    public int getAmountInBundle() {
+
+        return amountInBundle;
     }
 
-    public void setAntalPerUttag(int antalPerUttag) {
-        this.antalPerUttag = antalPerUttag;
+    public void setAmountInBundle(int amountInBundle) {
+
+        this.amountInBundle = amountInBundle;
     }
 
-    public int getKonsPerDag() {
-        return konsPerDag;
+    public int getPerDay() {
+
+        return perDay;
     }
 
-    public void setKonsPerDag(int konsPerDag) {
-        this.konsPerDag = konsPerDag;
+    public void setPerDay(int perDay) {
+
+        this.perDay = perDay;
     }
 
-    public int getEvExtraPerDag() {
-        return evExtraPerDag;
+    public int getExtra() {
+
+        return extra;
     }
 
-    public void setEvExtraPerDag(int evExtraPerDag) {
-        this.evExtraPerDag = evExtraPerDag;
+    public void setExtra(int extra) {
+
+        this.extra = extra;
     }
-
-//    @Override
-//    public String toString() {
-//        return preparat + " " + antalKvar + "st kvar " + uttagKvar + "x" + antalPerUttag  + "st uttag kvar " + " --- " + " Äter "+ konsPerDag + "st per dag " + evExtraPerDag + "st vid behov";
-//    }
-
 
     public LocalDate getLastDate() {
+
         return lastDate;
     }
 
     public void setLastDate(LocalDate lastDate) {
+
         this.lastDate = lastDate;
     }
 
     @Override
     public String toString() {
-        return preparat + "," + antalKvar + "," + uttagKvar + "," + antalPerUttag + "," + konsPerDag + "," + evExtraPerDag + "," + lastDate.toString();
+        return name + "," + remaining + "," + bundles + "," + amountInBundle + "," + perDay + "," + extra + "," + lastDate.toString();
     }
 
     public String toStringWithoutDate() {
-        return preparat + "," + antalKvar + "," + uttagKvar + "," + antalPerUttag + "," + konsPerDag + "," + evExtraPerDag;
+        return name + "," + remaining + "," + bundles + "," + amountInBundle + "," + perDay + "," + extra;
     }
 }

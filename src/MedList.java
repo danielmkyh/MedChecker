@@ -57,7 +57,7 @@ public class MedList {
 
         if(data.length != 7) {
 
-            throw new IndexOutOfBoundsException("Line had more or less than 6 fields when reading inventory");
+            throw new IndexOutOfBoundsException("Line had more or less than 7 fields when reading inventory");
         }
         String name = data[0];
         int remaining = Integer.parseInt(data[1]);
@@ -76,6 +76,8 @@ public class MedList {
     public void removeMeds(Meds meds) {
         medlist.remove(meds);
     }
+
+
 
     @Override
     public String toString() {

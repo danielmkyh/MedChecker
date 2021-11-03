@@ -46,7 +46,7 @@ public class runProgram {
                     break;
                 case 7:
                     System.out.println("7) Sparar (Under construction)");
-
+                    //MedList.saveMeds;
                     break;
                 default:
                     //System.out.println("Du kan bara välja 1-5");
@@ -61,7 +61,7 @@ public class runProgram {
 
     private static void printMenu() {
         // Compact menu:
-        System.out.println("Meny: (1)Lägg till, (2)Ändra, (3)Ta bort, (4)Ladda om, (5)Aktuell lista, (6)Se full meny, (7)Spara (8)Avsluta \n >" );
+        System.out.println("\nMeny: (1)Lägg till, (2)Ändra, (3)Ta bort, (4)Ladda om, (5)Aktuell lista, (6)Se full meny, (7)Spara (8)Avsluta \n >" );
     }
 
     private static void printFullMenu() {

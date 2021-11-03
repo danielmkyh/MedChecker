@@ -1,8 +1,8 @@
 import java.time.LocalDate;
 
 public class Pills extends Meds {
-    public Pills (String preparat, int antalKvar, int uttagKvar, int antalPerUttag, int konsPerDag, int evExtraPerDag, LocalDate date) {
-        super (preparat, antalKvar, uttagKvar, antalPerUttag, konsPerDag, evExtraPerDag, date);
+    public Pills (String name, int remaining, int bundles, int amountInBundle, int perDay, int extra, LocalDate date) {
+        super (name, remaining, bundles, amountInBundle, perDay, extra, date);
     }
 
     public Pills() {
