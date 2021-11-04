@@ -6,6 +6,7 @@ public class Main {
         MedList medList = new MedList();
         System.out.println(medList);
         Menu.menu();
+
     }
 
 }

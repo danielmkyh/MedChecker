@@ -59,4 +59,7 @@ public class Menu {
         System.out.println("8. Avsluta");
         System.out.println(" >");
     }
+
+
+
 }

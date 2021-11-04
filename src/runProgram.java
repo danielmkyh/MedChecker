@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class runProgram {
@@ -37,15 +36,19 @@ public class runProgram {
 
     }
 
-    private static void consumption() {
-        // TODO make a method that:
-        // TODO 1. calculate consumption based on the diffInDays and store it in remaining
-        // TODO 2. based on the new remaining value + (bundles * amountInBundle) divide it by perDay and preset days left.
-        // TODO 3. If it is less than 8 days left present a Warning
-    }
+    private static int consumption() {
+        int diffInDays = 0;
+        int remaining = 0;
+        int bundles = 0;
+        int amountInBundle = 0;
+        int perDay = 0;
+        int daysLeft;
+        remaining = remaining - (diffInDays*perDay);
+        daysLeft = (remaining + (bundles*amountInBundle)) / perDay;
+        return daysLeft;
+        // TODO 1. Make use of this method
+        // TODO 2. If it is less than 8 days left present a Warning
 
-    private static void quit() {
-        // TODO Maybe quit should trigger (Overwrite) to avoid extra typing
     }
 
     private static void removeMed() {
@@ -64,6 +67,18 @@ public class runProgram {
 
         System.out.println("Idag " + nowTime.toLocalDate() + " är det " + diffInDays + " dagar sedan senaste kontroll " + prevTime.toLocalDate());
         return diffInDays;
+    }
+
+    // Adding a few metods just for the sake of being able to test something
+    static class Calculator {
+        static int add(int a, int b) {
+            return a + b;
+        }
+    }
+    static class Monsters {
+        static int multiply(int a, int b, int c) {
+            return a*b*c;
+        }
     }
 
 }

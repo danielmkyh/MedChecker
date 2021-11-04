@@ -1,37 +1,47 @@
 import org.junit.jupiter.api.Test;
+
+
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class Tests { @Test
-    public void test1() {
-
-    assertEquals(true, true);
-}
+public class Tests {
 
     @Test
-    public void test2() {
-        String anything = "foot";
-        String something = "ball";
-        anything = anything + something;
-        assertNotEquals(anything, true);
+    public void testThatItCanAddNumbers() {
+        // given
+        int numberOne = 20;
+        int numberTwo = 30;
+        // when
+        int result = runProgram.Calculator.add(numberOne,numberTwo);
+        assertEquals(50, result);
+    }
+    @Test
+    public void testThatItCanMultiply() {
+        int Java = 10;
+        int Is = 20;
+        int a = 30;
+        int Monster = runProgram.Monsters.multiply(Java, Is, a);
+        assertEquals(6000,Monster);
+    }
+
+
+    @Test
+    public void testThatJavaIsMakingMyBrainHurt () {
+
+
+        assertEquals(true, true);
     }
 
     @Test
-    public void test3() {
+    public void testSomethingUseful() {
 
-    assertEquals(true, true);
+        assertEquals(true, true);
     }
 
     @Test
-    public void test4() {
+    public void canICreateOneMoreTest() {
 
-    assertEquals(true, true);
+        assertSame(false, false);
     }
-
-    @Test
-    public void test5() {
-
-    assertSame(false, false);
-    }
-
 }
