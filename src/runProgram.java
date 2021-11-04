@@ -33,7 +33,6 @@ public class runProgram {
         MedList medList = new MedList();
         medList.addMeds(medToAdd);
         medList.saveMeds();
-
     }
 
     private static int consumption() {
@@ -75,10 +74,10 @@ public class runProgram {
             return a + b;
         }
     }
+
     static class Monsters {
         static int multiply(int a, int b, int c) {
             return a*b*c;
         }
     }
-
 }
