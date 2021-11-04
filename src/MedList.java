@@ -68,10 +68,12 @@ public class MedList {
     }
 
     public void addMeds(Meds meds) {
+
         medlist.add(meds);
     }
 
     public void removeMeds(Meds meds) {
+
         medlist.remove(meds);
     }
 

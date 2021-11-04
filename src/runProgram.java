@@ -35,28 +35,28 @@ public class runProgram {
         medList.addMeds(medToAdd);
         medList.saveMeds();
 
-//    private static void changeMed() {
-//      // TODO if possible create method for change of individual values in single line of meds
-//    }
-//
-//    public static void removeMed() {
-//      // TODO Create some working method of choosing what line to remove from the medlist by only typing the name
-//    }
-//
-//    public static void quit() {
-//      // TODO Maybe quit should trigger (Overwrite) to avoid extra typing
-//    }
-//    public static void consumption() {
-//      // TODO make a method that:
-//      // TODO 1. calculate consumption based on the diffInDays and store it in remaining
-//      // TODO 2. based on the new remaining value + (bundles * amountInBundle) divide it by perDay and preset days left.
-//      // TODO 3. If it is less than 8 days left present a Warning
-//        }
+    }
 
+    private static void consumption() {
+        // TODO make a method that:
+        // TODO 1. calculate consumption based on the diffInDays and store it in remaining
+        // TODO 2. based on the new remaining value + (bundles * amountInBundle) divide it by perDay and preset days left.
+        // TODO 3. If it is less than 8 days left present a Warning
+    }
+
+    private static void quit() {
+        // TODO Maybe quit should trigger (Overwrite) to avoid extra typing
+    }
+
+    private static void removeMed() {
+        // TODO Create some working method of choosing what line to remove from the medlist by only typing the name
+    }
+
+    private static void changeMed() {
+        // TODO if possible create method for change of individual values in single line of meds
     }
 
     static long printDays() {
-
         // TODO get prevTime from save file for calculation of diffInDays and if needed convert it to Time from date
         LocalDateTime prevTime = LocalDateTime.of(2021, 10, 1, 0, 0);
         LocalDateTime nowTime = LocalDateTime.now();
