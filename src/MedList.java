@@ -54,9 +54,7 @@ public class MedList {
     }
 
     private Meds createMedsObject(String[] data) {
-
         if(data.length != 7) {
-
             throw new IndexOutOfBoundsException("Line had more or less than 7 fields when reading inventory");
         }
         String name = data[0];
@@ -76,7 +74,6 @@ public class MedList {
     public void removeMeds(Meds meds) {
         medlist.remove(meds);
     }
-
 
 
     @Override

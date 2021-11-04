@@ -1,8 +1,6 @@
-import java.io.Serializable;
 import java.time.LocalDate;
 
-//
-public class Meds implements Serializable {
+public class Meds {
 
     protected String name;
     protected int remaining;
@@ -24,13 +22,6 @@ public class Meds implements Serializable {
         this.perDay = perDay;
         this.extra = extra;
         this.lastDate = date;
-    }
-
-    public void consume(int days) {
-        int consumed = days * perDay;
-        remaining = remaining - consumed;
-//        // Behöver en variabel för antal dagar kvar men skall den hanteras här?
-//        int dagarKvar = ((uttagKvar*antalPerUttag)+antalKvar)/konsPerDag;
     }
 
     public String getName() {
